@@ -302,7 +302,7 @@ def pdhg(x, f, g, L, niter, tau=None, sigma=None, **kwargs):
         x_relax.lincomb(1 + theta, x, -theta, x_old)
 
         if callback is not None:
-            callback(x)
+            callback([x, y])
 
 
 def pdhg_stepsize(L, tau=None, sigma=None):
